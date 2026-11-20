@@ -1,6 +1,7 @@
 import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about"
 import Skill from "@/components/sections/skills"
+import Projects from "@/components/sections/projects"
 
 const sections = [
   //{
@@ -13,11 +14,11 @@ const sections = [
   //  command: "$ ls skills/",
   //  title: "Skills & Technologies",
   //},
-  {
-    id: "projects",
-    command: "$ ls projects/",
-    title: "Featured Projects",
-  },
+  //{
+  //  id: "projects",
+  //  command: "$ ls projects/",
+  //  title: "Featured Projects",
+  //},
   {
     id: "education",
     command: "$ cat education.md",
@@ -36,6 +37,7 @@ export default function Home() {
       <Hero id="hero"/>
       <About id="about"/>
       <Skill id="skills"/>
+      <Projects id ="projects" />
       {sections.map((section) => (
         <section
           key={section.id}

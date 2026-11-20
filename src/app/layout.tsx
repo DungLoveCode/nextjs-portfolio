@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     "Personal portfolio of Luong Tuan Dung, a student and full-stack developer passionate about building digital experiences.",
   keywords: [
     "Luong Tuan Dung",
+    "Lương Tuấn Dũng",
+    "Dung Luong",
+    "Dũng",
+    "Dung",
     "Full-stack Developer",
     "Python",
     "Django",
