@@ -35,7 +35,7 @@ const activities = [
     imageAlt: "Gosinga meditation course",
     icon: Flower2,
     tags: ["Meditation", "Self-awareness", "Personal Growth"],
-    certificate: false,
+    certificate: true,
   },
   {
     number: "03",
@@ -93,7 +93,7 @@ export default function Extracurricular() {
             </span>
 
             <span className="font-mono text-xs tracking-wider text-muted">
-              BEYOND THE CODE
+              BEYOND THE CODE & STUDY
             </span>
 
             <span className="h-px flex-1 bg-border" />
