@@ -2,6 +2,8 @@ import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about"
 import Skill from "@/components/sections/skills"
 import Projects from "@/components/sections/projects"
+import Education from "@/components/sections/education";
+import Extracurricular from "@/components/sections/extracurricular";
 
 const sections = [
   //{
@@ -19,11 +21,11 @@ const sections = [
   //  command: "$ ls projects/",
   //  title: "Featured Projects",
   //},
-  {
-    id: "education",
-    command: "$ cat education.md",
-    title: "Education",
-  },
+  //{
+  //  id: "education",
+  //  command: "$ cat education.md",
+  //  title: "Education",
+  //},
   {
     id: "contact",
     command: "$ ./contact.sh",
@@ -38,6 +40,8 @@ export default function Home() {
       <About id="about"/>
       <Skill id="skills"/>
       <Projects id ="projects" />
+      <Education id="education" />
+      <Extracurricular id="beyondthecode" />
       {sections.map((section) => (
         <section
           key={section.id}
