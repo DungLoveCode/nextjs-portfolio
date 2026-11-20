@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about"
+import Skill from "@/components/sections/skills"
 
 const sections = [
   //{
@@ -7,11 +8,11 @@ const sections = [
   //  command: "$ cat about.md",
   //  title: "About Me",
   //},
-  {
-    id: "skills",
-    command: "$ ls skills/",
-    title: "Skills & Technologies",
-  },
+  //{
+  //  id: "skills",
+  //  command: "$ ls skills/",
+  //  title: "Skills & Technologies",
+  //},
   {
     id: "projects",
     command: "$ ls projects/",
@@ -32,8 +33,9 @@ const sections = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden">
-      <Hero />
-      <About />
+      <Hero id="hero"/>
+      <About id="about"/>
+      <Skill id="skills"/>
       {sections.map((section) => (
         <section
           key={section.id}
