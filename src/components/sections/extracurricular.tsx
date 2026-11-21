@@ -89,7 +89,7 @@ export default function Extracurricular() {
         <div className="mb-14">
           <div className="mb-5 flex items-center gap-3">
             <span className="flex h-7 w-7 items-center justify-center rounded-md border border-primary/30 bg-primary/5 font-mono text-xs text-primary">
-              06
+              05
             </span>
 
             <span className="font-mono text-xs tracking-wider text-muted">

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -40,7 +39,7 @@ const contactDetails = [
   {
     label: "DISCORD",
     value: "dung.luong",
-    href: "https://discord.com/users/",
+    href: "https://discord.com/users/dung.luong",
     icon: SiDiscord,
     external: true,
   },
@@ -87,20 +86,46 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = async (
-    event: React.FormEvent<HTMLFormElement>
-  ) => {
-    event.preventDefault();
+  
+const handleSubmit = async (
+  event: React.FormEvent<HTMLFormElement>
+) => {
+  event.preventDefault();
 
-    setStatus("loading");
-    setErrorMessage("");
+  setStatus("loading");
+  setErrorMessage("");
 
-    // Backend integration will be added in the next step.
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.error || "Unable to send your message.");
+    }
+
+    setStatus("success");
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+  } catch (error) {
     setStatus("error");
     setErrorMessage(
-      "The contact service is not connected yet. Please email me directly for now."
+      error instanceof Error
+        ? error.message
+        : "Something went wrong. Please try again."
     );
-  };
+  }
+};
+
 
   return (
     <section
@@ -113,7 +138,7 @@ export default function Contact() {
         <div className="mb-14">
           <div className="mb-5 flex items-center gap-3">
             <span className="flex h-7 w-7 items-center justify-center rounded-md border border-primary/30 bg-primary/5 font-mono text-xs text-primary">
-              05
+              06
             </span>
 
             <span className="font-mono text-xs tracking-wider text-muted">
@@ -332,22 +357,7 @@ export default function Contact() {
                 </p>
               </div>
 
-              {/* Turnstile placeholder */}
-              <div className="flex min-h-16 items-center gap-3 rounded-lg border border-dashed border-border bg-background/50 px-4 py-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-surface text-primary">
-                  <CheckCircle2 size={19} />
-                </div>
-
-                <div>
-                  <p className="text-xs font-medium text-foreground">
-                    Spam protection
-                  </p>
-
-                  <p className="mt-1 text-[11px] text-muted">
-                    Cloudflare Turnstile will be integrated here.
-                  </p>
-                </div>
-              </div>
+              
 
               {/* Status message */}
               {status === "success" && (
@@ -373,7 +383,6 @@ export default function Contact() {
               {/* Submit */}
               <button
                 type="submit"
-                disabled={status === "loading"}
                 className="group flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 font-mono text-sm font-semibold text-background transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {status === "loading" ? (

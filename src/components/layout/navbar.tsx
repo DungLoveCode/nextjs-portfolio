@@ -5,7 +5,7 @@ export default function Navbar() {
     <header className="fixed top-0 z-50 w-full border-b border-border/70 bg-background/80 backdrop-blur-xl">
       <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-6 lg:px-10">
         <a
-          href="#home"
+          href="#"
           className="font-mono text-lg font-bold"
           aria-label="Dung - Home"
         >

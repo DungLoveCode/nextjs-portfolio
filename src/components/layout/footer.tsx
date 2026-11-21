@@ -92,7 +92,7 @@ export default function Footer() {
             </p>
 
             <a
-              href="mailto:dung.luong1812k9@gmail.com"
+              href="#contact"
               className="mt-5 inline-flex items-center gap-2 rounded-md border border-primary/40 px-4 py-3 font-mono text-xs text-primary transition-all hover:bg-primary hover:text-background"
             >
               Let's talk
