@@ -12,13 +12,13 @@ import Contact from "@/components/sections/contact";
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden">
-      <Hero id="hero"/>
-      <About id="about"/>
-      <Skill id="skills"/>
-      <Projects id ="projects" />
-      <Education id="education" />
-      <Extracurricular id="extracurricular" />
-      <Contact id="contact" />
+      <Hero />
+      <About />
+      <Skill />
+      <Projects />
+      <Education />
+      <Extracurricular />
+      <Contact />
     </main>
   );
 }
