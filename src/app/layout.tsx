@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     "Luong Tuan Dung",
     "Dung",
     "Lương Tuấn Dũng",
+    "luongtuandung",
     "Dũng",
     "Dung Luong",
     "Student Developer",
