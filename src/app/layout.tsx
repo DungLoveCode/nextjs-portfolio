@@ -32,6 +32,8 @@ export const metadata: Metadata = {
   keywords: [
     "Luong Tuan Dung",
     "Dung",
+    "Lương Tuấn Dũng",
+    "Dũng",
     "Dung Luong",
     "Student Developer",
     "Full-stack Developer",

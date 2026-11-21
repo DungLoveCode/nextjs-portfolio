@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+      from: "Dung's Portfolio <contact@luongtuandung.id.vn>",
       to: [process.env.CONTACT_EMAIL],
       replyTo: email.trim(),
       subject: `Portfolio message from ${name.trim()}`,
