@@ -39,7 +39,7 @@ const contactDetails = [
   {
     label: "DISCORD",
     value: "dung.luong",
-    href: "https://discord.com/users/dung.luong",
+    href: "https://discord.com/users/1312993153929842748",
     icon: SiDiscord,
     external: true,
   },

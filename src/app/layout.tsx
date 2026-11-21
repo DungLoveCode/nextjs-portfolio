@@ -37,6 +37,12 @@ export const metadata: Metadata = {
     "Student",
     "A Level Student",
   ],
+  openGraph: {
+    title: "Luong Tuan Dung | Full-stack Developer",
+    description:
+      "Explore my projects, technical skills, education, and development journey.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

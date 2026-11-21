@@ -45,6 +45,14 @@ const achievements = [
     description:
       "Received The Kindness Scholarship during my studies at Nisai Global School.",
   },
+  {
+    title: "VNPT Con Cuong Telecommunication Internship",
+    award: "Telecommunication Internship",
+    institution: "VNPT Con Cuong Telecommunication Centre",
+    year: "2026",
+    description:
+      "Gained practical exposure to telecommunications operations and digital business workflows. Explored electronic customs clearance procedures, learned about digital signature systems, and gained an understanding of how import/export platforms operate.",
+  },
 ];
 
 export default function Education() {
@@ -201,7 +209,7 @@ export default function Education() {
         <div className="mt-16">
           <div className="mb-8">
             <p className="font-mono text-xs text-secondary">
-              $ ls achievements/
+              $ ls achievements-and-experiences/
             </p>
 
             <h3 className="mt-2 text-2xl font-semibold text-foreground">
@@ -209,7 +217,7 @@ export default function Education() {
             </h3>
 
             <p className="mt-3 max-w-xl text-sm leading-7 text-muted">
-              Recognition and milestones earned throughout my academic journey.
+              Recognition and milestones earned throughout my journey.
             </p>
           </div>
 
